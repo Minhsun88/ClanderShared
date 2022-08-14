@@ -4,13 +4,15 @@ package com.example.gp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.applandeo.materialcalendarview.CalendarView;
 import com.example.gp.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,11 +22,34 @@ public final class ActivityIndexBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final TextView textView2;
+  public final Button buttonCancelTarget;
 
-  private ActivityIndexBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textView2) {
+  @NonNull
+  public final Button buttonGetTheDay;
+
+  @NonNull
+  public final Button buttonSetTarget;
+
+  @NonNull
+  public final Button buttonToday;
+
+  @NonNull
+  public final CalendarView calendarView;
+
+  @NonNull
+  public final BottomNavigationView navigation;
+
+  private ActivityIndexBinding(@NonNull ConstraintLayout rootView,
+      @NonNull Button buttonCancelTarget, @NonNull Button buttonGetTheDay,
+      @NonNull Button buttonSetTarget, @NonNull Button buttonToday,
+      @NonNull CalendarView calendarView, @NonNull BottomNavigationView navigation) {
     this.rootView = rootView;
-    this.textView2 = textView2;
+    this.buttonCancelTarget = buttonCancelTarget;
+    this.buttonGetTheDay = buttonGetTheDay;
+    this.buttonSetTarget = buttonSetTarget;
+    this.buttonToday = buttonToday;
+    this.calendarView = calendarView;
+    this.navigation = navigation;
   }
 
   @Override
@@ -54,13 +79,44 @@ public final class ActivityIndexBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.textView2;
-      TextView textView2 = ViewBindings.findChildViewById(rootView, id);
-      if (textView2 == null) {
+      id = R.id.button_CancelTarget;
+      Button buttonCancelTarget = ViewBindings.findChildViewById(rootView, id);
+      if (buttonCancelTarget == null) {
         break missingId;
       }
 
-      return new ActivityIndexBinding((ConstraintLayout) rootView, textView2);
+      id = R.id.button_GetTheDay;
+      Button buttonGetTheDay = ViewBindings.findChildViewById(rootView, id);
+      if (buttonGetTheDay == null) {
+        break missingId;
+      }
+
+      id = R.id.button_SetTarget;
+      Button buttonSetTarget = ViewBindings.findChildViewById(rootView, id);
+      if (buttonSetTarget == null) {
+        break missingId;
+      }
+
+      id = R.id.button_Today;
+      Button buttonToday = ViewBindings.findChildViewById(rootView, id);
+      if (buttonToday == null) {
+        break missingId;
+      }
+
+      id = R.id.calendarView;
+      CalendarView calendarView = ViewBindings.findChildViewById(rootView, id);
+      if (calendarView == null) {
+        break missingId;
+      }
+
+      id = R.id.navigation;
+      BottomNavigationView navigation = ViewBindings.findChildViewById(rootView, id);
+      if (navigation == null) {
+        break missingId;
+      }
+
+      return new ActivityIndexBinding((ConstraintLayout) rootView, buttonCancelTarget,
+          buttonGetTheDay, buttonSetTarget, buttonToday, calendarView, navigation);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
