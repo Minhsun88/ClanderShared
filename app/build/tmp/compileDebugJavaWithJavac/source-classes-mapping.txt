@@ -6,8 +6,6 @@ com/example/gp/index.java
  com.example.gp.index
 com/example/gp/BuildConfig.java
  com.example.gp.BuildConfig
-com/example/gp/databinding/ActivityMainBinding.java
- com.example.gp.databinding.ActivityMainBinding
 com/example/gp/register.java
  com.example.gp.register
  com.example.gp.register$1
@@ -26,3 +24,5 @@ com/example/gp/MainActivity.java
  com.example.gp.MainActivity$2$2
  com.example.gp.MainActivity$3
  com.example.gp.MainActivity$3$1
+com/example/gp/databinding/ActivityMainBinding.java
+ com.example.gp.databinding.ActivityMainBinding
