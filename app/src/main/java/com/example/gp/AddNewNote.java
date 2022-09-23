@@ -2,17 +2,16 @@ package com.example.gp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.example.gp.databinding.ActivityAddNewNoteBinding;
-import com.example.gp.databinding.ActivityIndexBinding;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
 
 public class AddNewNote extends AppCompatActivity {
     private ActivityAddNewNoteBinding B;
@@ -23,6 +22,13 @@ public class AddNewNote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         B = ActivityAddNewNoteBinding.inflate(getLayoutInflater());
         setContentView(B.getRoot());
+
+        Intent itAddNote = getIntent();
+        String Title = itAddNote.getStringExtra("renewTitle");
+        String Text = itAddNote.getStringExtra("renewText");
+
+        B.edTitle.setText(Title);
+        B.edText.setText(Text);
 
         B.buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override

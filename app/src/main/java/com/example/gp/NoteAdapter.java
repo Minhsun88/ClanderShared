@@ -3,7 +3,7 @@ package com.example.gp;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.util.Log;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,11 +72,32 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
                     }
                 });
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//            }
-//        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent itNote = new Intent(mContext,AddNewNote.class);
+                int id = holder.getAdapterPosition();
+
+                db.collection("Notes")
+                        .whereEqualTo("Title",arrayList.get(id))
+                        .get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if(task.isSuccessful()){
+                            for (QueryDocumentSnapshot doc : task.getResult())
+                            {
+                                String Title = doc.getString("Title");
+                                String Text = doc.getString("Text");
+
+                                itNote.putExtra("renewTitle",Title);
+                                itNote.putExtra("renewText",Text);
+                                mContext.startActivity(itNote);
+                            }
+                        }
+                    }
+                });
+            }
+        });
 
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override

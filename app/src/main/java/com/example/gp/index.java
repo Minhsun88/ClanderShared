@@ -105,6 +105,7 @@ public class index extends AppCompatActivity {
                     case R.id.record:
                         Intent it = getIntent();
                         String admin = it.getStringExtra("user");
+
                         Intent it2 = new Intent(index.this, Note.class);
                         it2.putExtra("userid",admin);
                         startActivity(it2);
