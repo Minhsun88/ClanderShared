@@ -25,6 +25,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.GP" >
         <activity
+            android:name="com.example.gp.AddNewNote"
+            android:exported="true" />
+        <activity
+            android:name="com.example.gp.Note"
+            android:exported="true" />
+        <activity
             android:name="com.example.gp.index"
             android:exported="true" />
         <activity
@@ -52,6 +58,9 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 

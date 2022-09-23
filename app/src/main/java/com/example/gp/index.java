@@ -1,13 +1,17 @@
 package com.example.gp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.applandeo.materialcalendarview.EventDay;
 import com.applandeo.materialcalendarview.exceptions.OutOfDateRangeException;
 import com.example.gp.databinding.ActivityIndexBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,11 +21,13 @@ import java.util.List;
 
 public class index extends AppCompatActivity {
     private ActivityIndexBinding B;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         B = ActivityIndexBinding.inflate(getLayoutInflater());
         setContentView(B.getRoot());
+
 
         B.buttonGetTheDay.setOnClickListener(v -> {
             /**利用forEach迴圈找出指定元素*/
@@ -90,6 +96,22 @@ public class index extends AppCompatActivity {
                     }
                 }
             }).start();
+        });
+
+        B.navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.record:
+                        Intent it = getIntent();
+                        String admin = it.getStringExtra("user");
+                        Intent it2 = new Intent(index.this, Note.class);
+                        it2.putExtra("userid",admin);
+                        startActivity(it2);
+                }
+
+                return false;
+            }
         });
     }
 }

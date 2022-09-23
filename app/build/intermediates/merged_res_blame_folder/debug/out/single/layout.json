@@ -1,14 +1,30 @@
 [
     {
-        "merged": "D:\\Clander_Shered\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_index.xml",
-        "source": "D:\\Clander_Shered\\app\\src\\main\\res\\layout\\activity_index.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\Clander_Shered\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
-        "source": "D:\\Clander_Shered\\app\\src\\main\\res\\layout\\activity_register.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_index.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_index.xml"
     },
     {
-        "merged": "D:\\Clander_Shered\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
-        "source": "D:\\Clander_Shered\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_register.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_note.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_note.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_record.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_record.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_new_note.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_add_new_note.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_view.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\item_view.xml"
     }
 ]

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GP">
         <activity
+            android:name=".AddNewNote"
+            android:exported="true" />
+        <activity
+            android:name=".Note"
+            android:exported="true" />
+        <activity
             android:name=".index"
             android:exported="true" />
         <activity
