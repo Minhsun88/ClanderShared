@@ -24,6 +24,10 @@
         "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_add_new_note.xml"
     },
     {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_group.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\activity_group.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_view.xml",
         "source": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\src\\main\\res\\layout\\item_view.xml"
     }

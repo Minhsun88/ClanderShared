@@ -2582,6 +2582,7 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_overlay
 drawable mtrl_tabs_default_indicator
 drawable mylinearlayout
+drawable mylinearlayout2
 drawable navigation_empty_icon
 drawable notification_action_background
 drawable notification_bg
@@ -2823,6 +2824,8 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id errorText1
+id errorText2
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2851,6 +2854,8 @@ id gone
 id graph
 id graph_wrap
 id group
+id groupChose
+id groupSet
 id group_divider
 id grouping
 id groups
@@ -3250,6 +3255,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_new_note
+layout activity_group
 layout activity_index
 layout activity_main
 layout activity_note

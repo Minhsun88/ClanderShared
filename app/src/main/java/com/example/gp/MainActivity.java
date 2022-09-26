@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
@@ -38,34 +39,58 @@ public class MainActivity extends AppCompatActivity {
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try{
+
                     String UserEmail = binding.edTAccount.getText().toString();
                     String UserPassword = binding.edTPasswd.getText().toString();
 
                     Intent it = new Intent(MainActivity.this, index.class);
                     it.putExtra("user", UserEmail);  // for sign out
 
-                    /* 登入認證 */
-                    Auth.signInWithEmailAndPassword(UserEmail, UserPassword)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        startActivity(it);  // go to Index and send "user"
-                                        Toast.makeText(MainActivity.this, "登入成功 " +
-                                                task.getResult().getUser().getEmail(), Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(UserEmail) == false) {           //是否有輸入帳號
+                    if (TextUtils.isEmpty(UserPassword) == false) {
+                        /* 登入認證 */
+                        Auth.signInWithEmailAndPassword(UserEmail, UserPassword)
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            startActivity(it);  // go to Index and send "user"
+                                            Toast.makeText(MainActivity.this, "登入成功 " +
+                                                    task.getResult().getUser().getEmail(), Toast.LENGTH_SHORT).show();
+                                        }
                                     }
-                                }
-                            })
-                            .addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(MainActivity.this,
-                                            "登入失敗 帳號或密碼錯誤", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                }catch (Exception e){
-                    Toast.makeText(MainActivity.this, "請輸入資料~", Toast.LENGTH_SHORT).show();
+                                })
+                                .addOnFailureListener(new OnFailureListener() {
+                                    @Override
+                                    public void onFailure(@NonNull Exception e) {
+                                        Toast.makeText(MainActivity.this,
+                                                "登入失敗 帳號或密碼錯誤", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                }
+                //判斷是否有輸入帳密
+                if(TextUtils.isEmpty(UserPassword)&&TextUtils.isEmpty(UserEmail))
+                {
+                    binding.errorText1.setText("輸入帳號");
+                    binding.errorText2.setText("輸入密碼");
+                    return;
+                }
+                if (TextUtils.isEmpty(UserPassword)) {
+                    binding.errorText1.setText(" ");
+                    binding.errorText2.setText("輸入密碼");
+                    return;
+                }
+                if (TextUtils.isEmpty(UserEmail)) {
+                    binding.errorText1.setText("輸入帳號");
+                    binding.errorText2.setText(" ");
+                    return;
+                }
+                if(TextUtils.isEmpty(UserPassword)==false&&TextUtils.isEmpty(UserEmail)==false)
+                {
+                    binding.errorText1.setText("");
+                    binding.errorText2.setText("");
+                    return;
                 }
             }
         });

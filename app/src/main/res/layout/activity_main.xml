@@ -30,6 +30,7 @@
         android:layout_marginTop="60dp"
         android:ems="10"
         android:text="4a890075@stust.edu.tw"
+        android:hint="請輸入帳號"
         android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,6 +46,7 @@
         android:layout_marginTop="60dp"
         android:ems="10"
         android:text="123456"
+        android:hint="請輸入密碼"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textAlignment="center"
@@ -76,6 +78,24 @@
         android:layout_height="wrap_content"
         android:text="忘記密碼"
         app:layout_constraintEnd_toEndOf="@+id/edT_passwd"
+        app:layout_constraintTop_toBottomOf="@+id/edT_passwd" />
+
+    <TextView
+        android:id="@+id/errorText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FF0000"
+        app:layout_constraintStart_toStartOf="@+id/edT_account"
+        app:layout_constraintTop_toBottomOf="@+id/edT_account" />
+
+    <TextView
+        android:id="@+id/errorText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FF0000"
+        app:layout_constraintStart_toStartOf="@+id/edT_passwd"
         app:layout_constraintTop_toBottomOf="@+id/edT_passwd" />
 
 

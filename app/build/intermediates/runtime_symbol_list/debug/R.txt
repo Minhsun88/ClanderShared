@@ -2581,6 +2581,7 @@ int drawable mtrl_popupmenu_background 0x7f0800a5
 int drawable mtrl_popupmenu_background_overlay 0x7f0800a6
 int drawable mtrl_tabs_default_indicator 0x7f0800a7
 int drawable mylinearlayout 0x7f0800a8
+int drawable mylinearlayout2 0x7f0800ba
 int drawable navigation_empty_icon 0x7f0800a9
 int drawable notification_action_background 0x7f0800aa
 int drawable notification_bg 0x7f0800ab
@@ -2822,6 +2823,8 @@ int id end 0x7f0900dc
 int id endToStart 0x7f0900dd
 int id enterAlways 0x7f0900de
 int id enterAlwaysCollapsed 0x7f0900df
+int id errorText1 0x7f09022d
+int id errorText2 0x7f09022e
 int id exitUntilCollapsed 0x7f0900e0
 int id expand_activities_button 0x7f0900e1
 int id expanded_menu 0x7f0900e2
@@ -2850,6 +2853,8 @@ int id gone 0x7f0900f8
 int id graph 0x7f0900f9
 int id graph_wrap 0x7f0900fa
 int id group 0x7f0900fb
+int id groupChose 0x7f090230
+int id groupSet 0x7f090231
 int id group_divider 0x7f0900fc
 int id grouping 0x7f0900fd
 int id groups 0x7f0900fe
@@ -3249,6 +3254,7 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_add_new_note 0x7f0c001c
+int layout activity_group 0x7f0c0083
 int layout activity_index 0x7f0c001d
 int layout activity_main 0x7f0c001e
 int layout activity_note 0x7f0c001f
