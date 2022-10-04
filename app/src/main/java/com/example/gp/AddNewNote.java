@@ -23,6 +23,7 @@ public class AddNewNote extends AppCompatActivity {
         B = ActivityAddNewNoteBinding.inflate(getLayoutInflater());
         setContentView(B.getRoot());
 
+        //更新紀錄用(26~32行)
         Intent itAddNote = getIntent();
         String Title = itAddNote.getStringExtra("renewTitle");
         String Text = itAddNote.getStringExtra("renewText");

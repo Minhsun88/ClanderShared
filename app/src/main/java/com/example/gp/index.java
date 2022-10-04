@@ -109,9 +109,15 @@ public class index extends AppCompatActivity {
                         Intent it2 = new Intent(index.this, Note.class);
                         it2.putExtra("userid",admin);
                         startActivity(it2);
+                        break;
                     case R.id.group:
                         Intent it3 = new Intent(index.this, Group.class);
                         startActivity(it3);
+                        break;
+                    case R.id.post:
+                        Intent it4 = new Intent(index.this, Post.class);
+                        startActivity(it4);
+                        break;
                 }
 
 

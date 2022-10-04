@@ -22,6 +22,9 @@ public final class ActivityRegisterBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final TextView PostName;
+
+  @NonNull
   public final Button btnRegister;
 
   @NonNull
@@ -37,21 +40,18 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final EditText edTPassword2;
 
   @NonNull
-  public final TextView textView;
-
-  @NonNull
   public final TextView textView2;
 
-  private ActivityRegisterBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnRegister,
-      @NonNull EditText edTAccount, @NonNull EditText edTName, @NonNull EditText edTPassword,
-      @NonNull EditText edTPassword2, @NonNull TextView textView, @NonNull TextView textView2) {
+  private ActivityRegisterBinding(@NonNull ConstraintLayout rootView, @NonNull TextView PostName,
+      @NonNull Button btnRegister, @NonNull EditText edTAccount, @NonNull EditText edTName,
+      @NonNull EditText edTPassword, @NonNull EditText edTPassword2, @NonNull TextView textView2) {
     this.rootView = rootView;
+    this.PostName = PostName;
     this.btnRegister = btnRegister;
     this.edTAccount = edTAccount;
     this.edTName = edTName;
     this.edTPassword = edTPassword;
     this.edTPassword2 = edTPassword2;
-    this.textView = textView;
     this.textView2 = textView2;
   }
 
@@ -82,6 +82,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.PostName;
+      TextView PostName = ViewBindings.findChildViewById(rootView, id);
+      if (PostName == null) {
+        break missingId;
+      }
+
       id = R.id.btn_register;
       Button btnRegister = ViewBindings.findChildViewById(rootView, id);
       if (btnRegister == null) {
@@ -112,20 +118,14 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
-        break missingId;
-      }
-
       id = R.id.textView2;
       TextView textView2 = ViewBindings.findChildViewById(rootView, id);
       if (textView2 == null) {
         break missingId;
       }
 
-      return new ActivityRegisterBinding((ConstraintLayout) rootView, btnRegister, edTAccount,
-          edTName, edTPassword, edTPassword2, textView, textView2);
+      return new ActivityRegisterBinding((ConstraintLayout) rootView, PostName, btnRegister,
+          edTAccount, edTName, edTPassword, edTPassword2, textView2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

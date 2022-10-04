@@ -7,12 +7,18 @@ com/example/gp/Note.java
  com.example.gp.Note$1
  com.example.gp.Note$2
  com.example.gp.Note$3
+com/example/gp/databinding/ActivityAddNewPostBinding.java
+ com.example.gp.databinding.ActivityAddNewPostBinding
 com/example/gp/databinding/ActivityIndexBinding.java
  com.example.gp.databinding.ActivityIndexBinding
 com/example/gp/databinding/ActivityNoteBinding.java
  com.example.gp.databinding.ActivityNoteBinding
+com/example/gp/databinding/PostViewBinding.java
+ com.example.gp.databinding.PostViewBinding
 com/example/gp/BuildConfig.java
  com.example.gp.BuildConfig
+com/example/gp/databinding/ActivityPostBinding.java
+ com.example.gp.databinding.ActivityPostBinding
 com/example/gp/register.java
  com.example.gp.register
  com.example.gp.register$1
@@ -38,6 +44,10 @@ com/example/gp/databinding/ActivityMainBinding.java
 com/example/gp/AddNewNote.java
  com.example.gp.AddNewNote
  com.example.gp.AddNewNote$1
+com/example/gp/PostAdapter.java
+ com.example.gp.PostAdapter
+ com.example.gp.PostAdapter$1
+ com.example.gp.PostAdapter$ViewHolder
 com/example/gp/databinding/ActivityRegisterBinding.java
  com.example.gp.databinding.ActivityRegisterBinding
 com/example/gp/NoteAdapter.java
@@ -51,7 +61,18 @@ com/example/gp/NoteAdapter.java
 com/example/gp/index.java
  com.example.gp.index
  com.example.gp.index$1
-com/example/gp/databinding/ActivityAddNewNoteBinding.java
- com.example.gp.databinding.ActivityAddNewNoteBinding
 com/example/gp/databinding/ActivityGroupBinding.java
  com.example.gp.databinding.ActivityGroupBinding
+com/example/gp/databinding/ActivityAddNewNoteBinding.java
+ com.example.gp.databinding.ActivityAddNewNoteBinding
+com/example/gp/AddNewPost.java
+ com.example.gp.AddNewPost
+ com.example.gp.AddNewPost$1
+ com.example.gp.AddNewPost$2
+ com.example.gp.AddNewPost$3
+ com.example.gp.AddNewPost$4
+ com.example.gp.AddNewPost$5
+com/example/gp/Post.java
+ com.example.gp.Post
+ com.example.gp.Post$1
+ com.example.gp.Post$2

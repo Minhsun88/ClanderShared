@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\user\\AndroidStudioProjects\\ClanderShared\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v28\\values-v28.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\fbc004077e64d3f0c7fdc38d7e8683c6\\transformed\\material-1.6.1\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\209b4e169df9eb39470483ca696e3286\\transformed\\material-1.6.1\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\8b268b82a31e9bd66b89cd058cf3396f\\transformed\\appcompat-1.4.2\\res\\values-v28\\values-v28.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\386194cb55b99429b17baabf60f1f6dd\\transformed\\appcompat-1.4.2\\res\\values-v28\\values-v28.xml",
                     "from": {
                         "startLines": "2,3,4,8",
                         "startColumns": "4,4,4,4",

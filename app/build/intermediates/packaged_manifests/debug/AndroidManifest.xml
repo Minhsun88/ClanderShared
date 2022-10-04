@@ -25,6 +25,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.GP" >
         <activity
+            android:name="com.example.gp.AddNewPost"
+            android:exported="true" />
+        <activity
+            android:name="com.example.gp.Post"
+            android:exported="true" />
+        <activity
             android:name="com.example.gp.Group"
             android:exported="true" />
         <activity

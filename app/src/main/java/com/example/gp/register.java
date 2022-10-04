@@ -108,7 +108,9 @@ public class register extends AppCompatActivity {
                                         member.put("password",pwd);
                                         member.put("name",name);
                                         db.collection("MemberData")
-                                                .add(member);
+                                                .document(name)
+                                                .set(member);
+
                                     }else{
                                         Toast.makeText(register.this, "帳號建立失敗", Toast.LENGTH_SHORT).show();
                                     }

@@ -2503,6 +2503,8 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable background_color_circle_selector
 drawable background_transparent
+drawable baseline_person_black_36
+drawable baseline_photo_camera_black_24
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2610,6 +2612,12 @@ id MyText
 id MyTitle
 id NO_DEBUG
 id Notice
+id PostEdText
+id PostImg
+id PostName
+id PostTime
+id PostViewLinear
+id PostViewScrollView
 id RecyclerView
 id SHIFT
 id SHOW_ALL
@@ -2677,6 +2685,9 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addLinear
+id addPostImg
+id addScrollView
 id adjust_height
 id adjust_width
 id alertTitle
@@ -2712,6 +2723,8 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btnAddNewNote
+id btnAddNewPost
+id btnSavePost
 id btn_register
 id button
 id button2
@@ -2850,6 +2863,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3103,10 +3117,10 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textView13
 id textView2
 id textView3
+id textViewName
 id textViewTitle
 id textView_forget
 id text_input_end_icon
@@ -3255,10 +3269,12 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_new_note
+layout activity_add_new_post
 layout activity_group
 layout activity_index
 layout activity_main
 layout activity_note
+layout activity_post
 layout activity_register
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3338,6 +3354,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout post_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3364,7 +3381,7 @@ menu example_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
-raw keep
+raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
