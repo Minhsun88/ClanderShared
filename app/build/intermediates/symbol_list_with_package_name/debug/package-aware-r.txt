@@ -2615,6 +2615,7 @@ id Notice
 id PostEdText
 id PostImg
 id PostName
+id PostText
 id PostTime
 id PostViewLinear
 id PostViewScrollView

@@ -35,8 +35,7 @@ public class AddNewPost extends AppCompatActivity {
     private ActivityAddNewPostBinding B;
     private StorageReference StorageRef;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    String postId = "Post";
-    int Id = 0;
+    String postId ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,10 +65,9 @@ public class AddNewPost extends AppCompatActivity {
             public void onClick(View view) {
                 String Text = B.PostEdText.getText().toString();
                 String Name = B.textViewName.getText().toString();
-                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd-HH:mm");
+                SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");
                 String Time =  format.format(new Date());
-                Id = Id+1;
-                postId =postId+""+Id;
+                postId = "Post" + "_" +Time;
 
                 HashMap<String,Object> Post = new HashMap<>();
                 Post.put("Text",Text);
@@ -77,11 +75,10 @@ public class AddNewPost extends AppCompatActivity {
                 Post.put("Name",Name);
                 Post.put("postId",postId);
 
-
-
                 db.collection("Post")
                         .document(postId)
                         .set(Post);
+
                 finish();
             }
         });

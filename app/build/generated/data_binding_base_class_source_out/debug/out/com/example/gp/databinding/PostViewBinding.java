@@ -4,7 +4,6 @@ package com.example.gp.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -24,13 +23,13 @@ public final class PostViewBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final EditText PostEdText;
-
-  @NonNull
   public final ImageView PostImg;
 
   @NonNull
   public final TextView PostName;
+
+  @NonNull
+  public final TextView PostText;
 
   @NonNull
   public final TextView PostTime;
@@ -41,13 +40,13 @@ public final class PostViewBinding implements ViewBinding {
   @NonNull
   public final HorizontalScrollView PostViewScrollView;
 
-  private PostViewBinding(@NonNull ConstraintLayout rootView, @NonNull EditText PostEdText,
-      @NonNull ImageView PostImg, @NonNull TextView PostName, @NonNull TextView PostTime,
+  private PostViewBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView PostImg,
+      @NonNull TextView PostName, @NonNull TextView PostText, @NonNull TextView PostTime,
       @NonNull LinearLayout PostViewLinear, @NonNull HorizontalScrollView PostViewScrollView) {
     this.rootView = rootView;
-    this.PostEdText = PostEdText;
     this.PostImg = PostImg;
     this.PostName = PostName;
+    this.PostText = PostText;
     this.PostTime = PostTime;
     this.PostViewLinear = PostViewLinear;
     this.PostViewScrollView = PostViewScrollView;
@@ -80,12 +79,6 @@ public final class PostViewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.PostEdText;
-      EditText PostEdText = ViewBindings.findChildViewById(rootView, id);
-      if (PostEdText == null) {
-        break missingId;
-      }
-
       id = R.id.PostImg;
       ImageView PostImg = ViewBindings.findChildViewById(rootView, id);
       if (PostImg == null) {
@@ -95,6 +88,12 @@ public final class PostViewBinding implements ViewBinding {
       id = R.id.PostName;
       TextView PostName = ViewBindings.findChildViewById(rootView, id);
       if (PostName == null) {
+        break missingId;
+      }
+
+      id = R.id.PostText;
+      TextView PostText = ViewBindings.findChildViewById(rootView, id);
+      if (PostText == null) {
         break missingId;
       }
 
@@ -116,8 +115,8 @@ public final class PostViewBinding implements ViewBinding {
         break missingId;
       }
 
-      return new PostViewBinding((ConstraintLayout) rootView, PostEdText, PostImg, PostName,
-          PostTime, PostViewLinear, PostViewScrollView);
+      return new PostViewBinding((ConstraintLayout) rootView, PostImg, PostName, PostText, PostTime,
+          PostViewLinear, PostViewScrollView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

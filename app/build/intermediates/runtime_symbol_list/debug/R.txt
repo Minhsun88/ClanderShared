@@ -2614,6 +2614,7 @@ int id Notice 0x7f09000a
 int id PostEdText 0x7f09000b
 int id PostImg 0x7f09000c
 int id PostName 0x7f09000e
+int id PostText 0x7f090241
 int id PostTime 0x7f09000f
 int id PostViewLinear 0x7f09023c
 int id PostViewScrollView 0x7f09023d

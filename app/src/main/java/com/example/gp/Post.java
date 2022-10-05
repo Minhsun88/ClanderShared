@@ -61,4 +61,26 @@ public class Post extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        arrayListPost.clear();  // 清空原本的adapter data
+        // 重新載入data
+        db.collection("Post")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()){
+                            for (QueryDocumentSnapshot doc : task.getResult()){
+                                String PostId = doc.getString("postId");
+                                arrayListPost.add(PostId);
+                            }
+                            adapter.notifyDataSetChanged();
+                        }
+                    }
+                });
+    }
 }
