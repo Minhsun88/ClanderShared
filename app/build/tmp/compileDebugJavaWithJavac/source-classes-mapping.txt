@@ -47,6 +47,9 @@ com/example/gp/AddNewNote.java
 com/example/gp/PostAdapter.java
  com.example.gp.PostAdapter
  com.example.gp.PostAdapter$1
+ com.example.gp.PostAdapter$2
+ com.example.gp.PostAdapter$2$1
+ com.example.gp.PostAdapter$2$2
  com.example.gp.PostAdapter$ViewHolder
 com/example/gp/databinding/ActivityRegisterBinding.java
  com.example.gp.databinding.ActivityRegisterBinding

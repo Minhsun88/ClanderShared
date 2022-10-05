@@ -68,8 +68,8 @@ public class AddNewPost extends AppCompatActivity {
                 String Name = B.textViewName.getText().toString();
                 SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd-HH:mm");
                 String Time =  format.format(new Date());
-                Id = Id + 1;
-                postId =postId+Id;
+                Id = Id+1;
+                postId =postId+""+Id;
 
                 HashMap<String,Object> Post = new HashMap<>();
                 Post.put("Text",Text);
@@ -82,7 +82,6 @@ public class AddNewPost extends AppCompatActivity {
                 db.collection("Post")
                         .document(postId)
                         .set(Post);
-
                 finish();
             }
         });

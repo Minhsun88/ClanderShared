@@ -2,11 +2,13 @@ package com.example.gp;
 
 import android.content.Context;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -17,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -49,6 +52,8 @@ public class PostAdapter  extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         holder.textViewTime = itemView.findViewById(R.id.PostTime);
         holder.imageView = itemView.findViewById(R.id.PostImg);
         holder.editText = itemView.findViewById(R.id.PostEdText);
+        holder.horizontalScrollView = itemView.findViewById(R.id.PostViewScrollView);
+        holder.linear = itemView.findViewById(R.id.PostViewLinear);
 
         return holder;
     }
@@ -80,28 +85,49 @@ public class PostAdapter  extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                     }
                 });
 
-//        StorageRef.child("PostImg").listAll()
-//                .addOnSuccessListener(new OnSuccessListener<ListResult>() {
+//        StorageRef.child("PostImg").child("Postimage:59")
+//                .getDownloadUrl()
+//                .addOnSuccessListener(new OnSuccessListener<Uri>() {
 //                    @Override
-//                    public void onSuccess(ListResult listResult) {
-//                        for (StorageReference item : listResult.getItems()){
-//                            item.getDownloadUrl()
-//                                    .addOnSuccessListener(new OnSuccessListener<Uri>() {
-//                                        @Override
-//                                        public void onSuccess(Uri uri) {
-//                                            ImageView imageView = new ImageView(mContext);//新增ImageView
-//                                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(400, 400);
-//                                            imageView.setLayoutParams(params);//調整ImageView大小
-//                                            Glide.with(mContext)
-//                                                    .load(uri)
-//                                                    .into(imageView);
-//
-//                                            holder.linear.addView(imageView);
-//                                        }
-//                                    });
-//                        }
+//                    public void onSuccess(Uri uri) {
+//                        Glide.with(mContext)
+//                                .load(uri)
+//                                .into(holder.imageView);
 //                    }
 //                });
+
+        StorageRef.child("PostImg").listAll()
+                .addOnSuccessListener(new OnSuccessListener<ListResult>() {
+                    @Override
+                    public void onSuccess(ListResult listResult) {
+                        for (StorageReference item : listResult.getItems()){
+                            item.getDownloadUrl()
+                                    .addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                        @Override
+                                        public void onSuccess(Uri uri) {
+                                            Log.d("Demo1",uri.toString());
+
+                                            ImageView imageView = new ImageView(mContext);
+                                            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(500, 500);
+                                            imageView.setLayoutParams(params);
+
+                                            Glide.with(mContext)
+                                                    .load(uri)
+                                                    .into(imageView);
+
+                                            holder.linear.addView(imageView);
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Log.d("Demo12",e.getMessage());
+                                        }
+                                    });
+                        }
+                    }
+
+                });
     }
 
     @Override
@@ -112,10 +138,9 @@ public class PostAdapter  extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
         TextView textViewName,textViewTime;
         ImageView imageView;
-        ScrollView scrollView;
+        HorizontalScrollView horizontalScrollView;
         LinearLayout linear;
         EditText editText;
-//        Button button;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
